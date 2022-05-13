@@ -1,0 +1,28 @@
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i> Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    {{#each courses}}
+
+      <a
+        href="http://localhost:5000/courses.html?category={{this.id}}"
+      >{{this.title}}</a>
+
+    {{/each}}
+
+  </div>
+</div>
+
+<div class="container content">
+    <h1>Courses</h1>
+
+    {{> search }}
+
+    <div class="content-course" id="content-course">
+        {{#each result}}
+          {{>displayCourse}}
+        {{/each}}
+    </div>
+
+
+</div>

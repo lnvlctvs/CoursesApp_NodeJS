@@ -1,0 +1,32 @@
+<h1>{{category}}</h1>
+<div>
+<a href="/" class="button"><button class="btn"><i class="fa fa-home"></i> Home</button></a>
+</div>
+
+<div class="courses">
+
+  {{#each jsondata}}
+
+    <section>
+
+      <img src="https://elearning-aueb.herokuapp.com/static/images/{{this.img}}" 
+      alt="{{this.img}}" 
+      width="400" 
+      height="200"
+      >
+
+      <h2>{{this.title}}</h2>
+
+      <h3>Στόχοι:</h3>
+
+      <p>{{this.objectives}}</p>
+
+      <h3>Περιγραφή:</h3>
+
+      <p>{{this.description}}</p>
+
+    </section>
+
+  {{/each}}
+  
+</div>
